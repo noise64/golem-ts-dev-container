@@ -1,0 +1,13 @@
+package golem:component;
+
+// See https://component-model.bytecodealliance.org/design/wit.html for more details about the WIT syntax
+
+interface api {
+  get-last-result: func() -> string;
+  fetch-json: func(url: string) -> string;
+}
+
+world golem-ts-example  {
+  import golem:api/host@0.2.0;
+  export api;
+}

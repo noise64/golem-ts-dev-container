@@ -1,0 +1,12 @@
+{
+    "name": "Golem",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "devcontainer",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {},
+        "ghcr.io/devcontainers/features/rust:1": {},
+        "./golem-rust-wasm": {},
+        "./golem-cli": {}
+    }
+}

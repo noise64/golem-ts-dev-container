@@ -1,0 +1,12 @@
+{
+    "id": "golem",
+    "version": "0.0.1",
+    "name": "Golem",
+    "description": "Installs golem-cli",
+    "installsAfter": [
+        "./golem-rust-wasm"
+    ],
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/rust": {}
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "stub": "jco stubgen wit -o src/generated",
+    "build": "rollup --config",
+    "componentize": "npm run stub && npm run build && jco componentize -w wit -o out/golem_dev_containers.wasm out/main.js",
+    "clean": "rm -rf out src/generated src/main.d.ts",
+    "golemComponentAdd": "golem-cli component add -c fetch ./out/golem_dev_containers.wasm",
+    "golemComponentUpdate": "golem-cli component update -c fetch ./out/golem_dev_containers.wasm",
+    "golemComponentList": "golem-cli component list -c fetch",
+    "golemComponentGet": "golem-cli component get -c fetch",
+    "golemWorkerList": "golem-cli worker list -c fetch"
+  },
+  "devDependencies": {
+    "@golemcloud/componentize-js": "0.10.2-golem.1",
+    "@golemcloud/golem-ts": "0.1.0",
+    "@golemcloud/jco": "1.4.0-golem.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "@types/node": "^20.14.2",
+    "rollup": "^4.18.0",
+    "tslib": "^2.6.3"
+  }
+}

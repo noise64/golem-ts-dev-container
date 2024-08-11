@@ -1,0 +1,9 @@
+{
+    "id": "golem",
+    "version": "0.0.1",
+    "name": "Golem",
+    "description": "Installs extra Rust targets and binaries for Golem",
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/rust": {}
+    }
+}
